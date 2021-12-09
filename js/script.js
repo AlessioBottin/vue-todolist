@@ -46,6 +46,9 @@ const app = new Vue(
                     );
                 }; 
                 this.newToDo = '';
+            },
+            toggleDone: function(index) {
+                this.toDoList[index].done = !this.toDoList[index].done;
             }
         },
     }
