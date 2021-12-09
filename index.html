@@ -54,7 +54,7 @@
                     <li v-for="(element, index) in toDoList" :class="{ 'done' : element.done }">
 
                         <!-- Text  -->
-                        <span class="text"> {{ element.text }} </span>
+                        <div class="text" @click="toggleDone(index)"> {{ element.text }} </div>
 
                         <!-- Icon  -->
                         <span class="cross-icon" @click="removeToDo(index)">
