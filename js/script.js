@@ -20,6 +20,7 @@ const app = new Vue(
     {
         el: '#root',
         data: {
+            newToDo: '',
             toDoList: [
                 {
                     text: 'fare la spesa',
@@ -28,12 +29,23 @@ const app = new Vue(
                 {
                     text: 'porta fuori il cane',
                     done: false
-                }
+                },
             ]
         },
         methods: {
             removeToDo: function(index) {
                 this.toDoList.splice(index, 1);
+            },
+            addToDo: function() {
+                if (this.newToDo.trim() !== '') {
+                    this.toDoList.push(
+                        {
+                            text: this.newToDo.trim(),
+                            done: false
+                        },
+                    );
+                }; 
+                this.newToDo = '';
             }
         },
     }

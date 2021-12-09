@@ -29,8 +29,8 @@
 
                 <!-- Add Buttons -->
                 <div class="add-buttons">
-                    <input type="text" placeholder="Scrivi una cosa da fare">
-                    <button>Aggiungi</button>
+                    <input type="text" placeholder="Scrivi una cosa da fare" v-model="newToDo">
+                    <button @click="addToDo">Aggiungi</button>
                 </div>
 
                 <!-- Filter button  -->
@@ -44,14 +44,20 @@
             <div class="todo-list">
 
                 <ul v-if="toDoList.length > 0">
+
+                    <!-- Single ToDo  -->
                     <li v-for="(element, index) in toDoList" :class="{ 'done' : element.done }">
+
                         <!-- Text  -->
                         <span class="text"> {{ element.text }} </span>
+
                         <!-- Icon  -->
                         <span class="cross-icon" @click="removeToDo(index)">
                             <i class="fas fa-times"></i>
                         </span>
+
                     </li>
+
                 </ul>
                 <p v-else>Non hai niente da fare per oggi.</p>
                 
