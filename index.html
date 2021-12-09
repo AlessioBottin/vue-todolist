@@ -29,7 +29,12 @@
 
                 <!-- Add Buttons -->
                 <div class="add-buttons">
-                    <input type="text" placeholder="Scrivi una cosa da fare" v-model="newToDo">
+                    <input 
+                        type="text" 
+                        placeholder="Scrivi una cosa da fare" 
+                        v-model="newToDo" 
+                        @keyup.enter="addToDo"
+                    >
                     <button @click="addToDo">Aggiungi</button>
                 </div>
 
