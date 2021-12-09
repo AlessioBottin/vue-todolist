@@ -44,15 +44,16 @@
             <div class="todo-list">
 
                 <ul v-if="toDoList.length > 0">
-                    <li v-for="element in toDoList" :class="{ 'done' : element.done }">
+                    <li v-for="(element, index) in toDoList" :class="{ 'done' : element.done }">
                         <!-- Text  -->
                         <span class="text"> {{ element.text }} </span>
                         <!-- Icon  -->
-                        <span class="cross-icon">
+                        <span class="cross-icon" @click="removeToDo(index)">
                             <i class="fas fa-times"></i>
                         </span>
                     </li>
                 </ul>
+                <p v-else>Non hai niente da fare per oggi.</p>
                 
             </div>
 

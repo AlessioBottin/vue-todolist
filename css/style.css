@@ -64,6 +64,10 @@ header img {
     float: right;
 }
 
+.todo-list li .cross-icon:hover {
+    color: red;
+}
+
 /* Utlity  */
 .done {
     text-decoration: line-through;
