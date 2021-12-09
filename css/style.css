@@ -9,3 +9,62 @@
 ul {
     list-style-type: none;
 }
+
+img {
+    max-width: 100%;
+}
+/* Header  */
+header {
+    padding: 20px 0px;
+}
+
+header img {
+    height: 80px;
+    margin: auto;
+    display: block;
+}
+
+/* Main   */
+.buttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.add-buttons input,
+.add-buttons button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.filter-button input {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 300px;
+}
+
+/* To do list  */
+.todo-list {
+    width: 65%;
+    margin: auto;
+    background-color: rgb(240, 240, 240);
+    border-radius: 20px;
+    margin-top: 40px;
+    padding: 30px;
+}
+
+.todo-list li {
+    border-bottom: 1px solid rgb(190, 190, 190);
+    margin: 10px 0;
+}
+
+.todo-list li .cross-icon {
+    float: right;
+}
+
+/* Utlity  */
+.done {
+    text-decoration: line-through;
+}
